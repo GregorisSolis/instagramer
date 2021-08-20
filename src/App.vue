@@ -7,11 +7,15 @@
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
 
 body{
   margin: 0;
   background-color: #fafafa;
+  font-family: 'Raleway', sans-serif;
 }
+
+#app{text-align: center;}
 
 a{text-decoration: none;}
 

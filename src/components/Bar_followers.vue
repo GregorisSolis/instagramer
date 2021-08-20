@@ -1,16 +1,16 @@
 <template>
 	<div class="container_bar-followers">
 	<div class="bar_followers">
-		<div class="post"><strong>0</strong><p>post</p></div>
-		<div class="followers"><strong>0</strong><p>followers</p></div>
-		<div class="following"><strong>0</strong><p>following</p></div>
+		<div class="post"><strong>5</strong><p>post</p></div>
+		<div class="followers"><strong>121</strong><p>followers</p></div>
+		<div class="following"><strong>212</strong><p>following</p></div>
 	</div>
 
 	<div class="bar_followers-mobile">
 		<div class="sectionA">
-			<div class="post"><strong>3</strong></div>
-			<div class="followers"><strong>0</strong></div>
-			<div class="following"><strong>0</strong></div>
+			<div class="post"><strong>5</strong></div>
+			<div class="followers"><strong>121</strong></div>
+			<div class="following"><strong>212</strong></div>
 		</div>
 		<div class="sectionB">
 			<div class="post"><p>post</p></div>

@@ -5,8 +5,8 @@
 		<img class="image_post" :src=urlPost alt="post">
 
 		<div class="background_hover">
-			<img class="heart_like" src="./../assets/heart_white.png" alt="heart_like"><p>0</p>
-			<img class="comment_post" src="./../assets/comments_white.png" alt="comments"><p>0</p>
+			<img class="heart_like" src="./../assets/heart_white.png" alt="heart_like"><p>{{numLikes}}</p>
+			<img class="comment_post" src="./../assets/comments_white.png" alt="comments"><p>{{numComments}}</p>
 		</div>
 	</div>
 
@@ -15,7 +15,7 @@
 <script>
 	export default{
 		name: 'Post',
-		props: ['urlPost']
+		props: ['urlPost', 'numLikes', 'numComments']
 	}
 </script>
 
@@ -65,10 +65,13 @@
 	@media only screen and (max-width: 600px){
 	.container_post{
 		position: relative;
-		height: 150px;
+		height: 130px;
 		width: 100%;
 		overflow: hidden;
+		margin: 0 auto;
 	}
+
+	.container_post .image_post{margin: 1%;}
 
 	.container_post .background_hover{display: none;}
 	}

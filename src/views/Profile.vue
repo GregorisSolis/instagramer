@@ -48,11 +48,31 @@
 		</div>
 
 		<div class="container_posts">
-			<Post urlPost="https://cdn.pixabay.com/photo/2011/03/16/16/13/tree-5378_960_720.jpg"/>
-			<Post urlPost="https://cdn.pixabay.com/photo/2011/03/16/16/13/tree-5378_960_720.jpg"/>
-			<Post urlPost="https://cdn.pixabay.com/photo/2011/03/16/16/13/tree-5378_960_720.jpg"/>
-			<Post urlPost="https://cdn.pixabay.com/photo/2011/03/16/16/13/tree-5378_960_720.jpg"/>
-			<Post urlPost="https://cdn.pixabay.com/photo/2011/03/16/16/13/tree-5378_960_720.jpg"/>
+			<Post 
+				urlPost="https://cdn.pixabay.com/photo/2011/03/16/16/13/tree-5378_960_720.jpg"
+				numLikes="14"
+				numComments="7"
+			/>
+			<Post 
+				urlPost="https://cdn.pixabay.com/photo/2016/11/22/21/46/arches-1850730_960_720.jpg"
+				numLikes="56"
+				numComments="44"
+			/>
+			<Post 
+				urlPost="https://cdn.pixabay.com/photo/2016/12/03/00/48/bridge-1878921_960_720.jpg"
+				numLikes="31"
+				numComments="11"
+			/>
+			<Post 
+				urlPost="https://cdn.pixabay.com/photo/2014/12/15/13/57/sunset-569093_960_720.jpg"
+				numLikes="28"
+				numComments="23"
+			/>
+			<Post 
+				urlPost="https://cdn.pixabay.com/photo/2013/04/09/08/08/building-102110_960_720.jpg"
+				numLikes="27"
+				numComments="17"
+			/>
 		</div>
 	</div>
 
@@ -77,8 +97,6 @@
 
 <style>
 	
-	@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
-
 	.number_post-followers-following-mobile{display: none;}
 
 	.container_profile{
@@ -202,13 +220,13 @@
 	
 	.container_story-featured{width: 90%;}
 	.container_description-profile{margin: 0;}
-	.container_description-profile p{width: 130%; margin: 1% 0;}
+	.container_description-profile p{width: 140%; margin: 1% 0;}
 
 	.container_posts{
 		width: 100%;
 		display: grid;
-		grid-template-columns: repeat(3, 33.3%);
-		grid-template-rows: 150px;
+		grid-template-columns: repeat(3, 33%);
+		grid-template-rows: 131px;
 		margin: 0;
 	}
 }
