@@ -23,9 +23,10 @@
 	
 	.container_post{
 		position: relative;
-		height: 280px;
-		width: 280px;
+		height: 230px;
+		width: 230px;
 		overflow: hidden;
+		margin: 1%;
 	}
 
 	.container_post .background_hover{
@@ -62,7 +63,16 @@
 		position: absolute;
 	}
 
-	@media only screen and (max-width: 600px){
+	@media only screen and (max-width:  799px){
+		.container_post{
+			height: 196px;
+			width: 196px;
+			margin: 1% 0;
+		}
+	}
+
+
+	@media only screen and (max-width: 599px){
 	.container_post{
 		position: relative;
 		height: 130px;

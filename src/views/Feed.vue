@@ -1,5 +1,6 @@
 <template>
   <div class="feed_container">
+   <Loading/> 
   <Nav/>
 
   <div class="feed">
@@ -46,7 +47,6 @@
       </div>
 
       <Public_friend 
-        coloor="background: red"
         username="Jonas"
         url_photo_profile="https://cdn.pixabay.com/photo/2017/08/10/03/47/guy-2617866_960_720.jpg"
         url_public_img="https://cdn.pixabay.com/photo/2021/08/03/05/36/flowers-6518496_960_720.jpg"
@@ -65,7 +65,6 @@
         comment_res="amazing your drawing"
       />
       <Public_friend
-        coloor="background: red"
         username="Frank"
         url_photo_profile="https://cdn.pixabay.com/photo/2018/08/13/22/29/horse-3604162_960_720.jpg"
         url_public_img="https://cdn.pixabay.com/photo/2017/12/07/13/48/siberian-husky-3003813_960_720.jpg"
@@ -114,7 +113,7 @@
         <Suggestion 
           imgURL="https://cdn.pixabay.com/photo/2020/04/30/15/34/code-5113374_960_720.jpg"
           username="codex"
-          name="codex academy"
+          name="academy"
         />
         <Suggestion 
           imgURL="https://cdn.pixabay.com/photo/2014/03/21/03/50/dog-291758_960_720.jpg"
@@ -134,13 +133,16 @@
   import HistoryImg from './../components/HistoryImg.vue'
   import Suggestion from './../components/Suggestion.vue'
   import Public_friend from './../components/Public_friend.vue'
+  import Loading from './../components/Loading.vue'
+
 
   export default {
     components: {
       Nav,
       HistoryImg,
       Suggestion,
-      Public_friend
+      Public_friend,
+      Loading
     },
   }
 </script>
@@ -165,11 +167,13 @@
     margin: 4% 0;
     padding: 2% 0;
     border: 1px solid rgba(219,219,219,1);
-    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: scroll;
   }
-  .fiends_history:hover{ overflow-x: scroll;}
 
-  .feed .content{height: 93vh;}
+  .fiends_history::-webkit-scrollbar{width: 2px;}
+
+  .barra_fixed{margin: 0 0 0 10%;}
 
   .barra_profile{
     display: flex;
@@ -189,7 +193,7 @@
 
   .barra_profile-photo img{width: 100%; border-radius: 100%;}
   .displayNameUsername{width: 50%;}
-  .displayNameUsername p{margin:0; display: flex;}
+  .displayNameUsername p, .action_p{margin:0; display: flex; font-size: .9em;}
   .displayNameUsername .usernameGray,.suggestion_for_you .tittle_suggestion p{color: gray;}
   .suggestion_for_you .usernameBlack{color: black;}
   .action_p a{color: #0095f6;}
@@ -197,19 +201,31 @@
   .suggestion_for_you .tittle_suggestion{
     display: flex;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
   }
   .suggestion_for_you .tittle_suggestion p{
-    padding: 0 0 0 8%;
-    margin: 0 0 4% 0;
+    margin: 0 0 6% 0;
   }
+
+  .suggestion_for_you .tittle_suggestion p,
+  .suggestion_for_you .tittle_suggestion a{
+    font-size: .9em;
+  }
+
+
 
   .suggestion_for_you .tittle_suggestion a{color: black; margin: 0;}
 
-  @media only screen and (max-width: 600px){
+  @media only screen and (max-width: 900px){
+    .feed{max-width: 100%; display: block; margin: 5% 0 14% 0}
     .barra_fixed{display: none;}
-    .feed{max-width: 99%; display: block;}
+    .fiends_history{border-top: none}
+  }
+
+  @media only screen and (max-width: 720px){
+    .barra_fixed{display: none;}
+    .feed{max-width: 99%; display: block; margin: 5% 0 14% 0}
     .content{margin: 0 auto;}
-    .fiends_history{margin: 6% auto 0 auto; background-color: #fafafa;}
+    .fiends_history{ margin-bottom: 0; background-color: #fafafa; border-top: none}
   }
 </style>

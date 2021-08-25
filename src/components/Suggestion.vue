@@ -24,7 +24,6 @@
 
 <style scoped>
 	.container_suggestion-profile{
-		width: 80%;
 		display: flex;
 		justify-content: center;
 		align-items: center;

@@ -34,7 +34,23 @@
 	}
 	.container_bar-followers{width: 100%;}
 
+	.bar_followers .post,
+	.bar_followers .followers,
+	.bar_followers .following{
+		margin: 0 5%;
+		text-align: center;
+	}
+
+	.bar_followers .post p,
+	.bar_followers .followers p,
+	.bar_followers .following p{
+		margin: 6% 0;
+		color: gray;
+	}
+
+
 	@media only screen and (max-width: 600px){
+
 		.bar_followers-mobile{
 			display: block;
 			width: 100%;

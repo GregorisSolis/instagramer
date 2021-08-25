@@ -8,13 +8,25 @@
 			<div class="config"><img src="./../assets/config.png" alt="config"></div>
 		</div>
 
-		<div class="public_Friend-img">
-			<img :src="url_public_img" alt="post_friend">
+		<div class="public_Friend-img" @click="handleChangeColor">
+			<img 
+				class="anima_heart" 
+				src="./../assets/heart_white.png" 
+				alt="post_friend"
+				v-bind:style="showHearActive" 
+			/>
+			<img class="image_post_friends" :src="url_public_img" alt="post_friend">
 		</div>
 
 		<div class="public_Friend-options">
 			<div class="heart_show_share_save">
-				<img class="heart_btn" src="./../assets/heart_red.png" v-bind:style="coloor" alt="iconLike">
+				<img 
+					class="heart_btn" 
+					src="./../assets/heart_red.png" 
+					v-bind:style="likeColor"
+					alt="iconLike"
+					@click="changeColor"
+				/>
 				<img class="comments_btn" src="./../assets/comments.png" alt="iconComment">
 				<img class="share_btn" src="./../assets/share.png" alt="iconShare">
 				<div class="scroll"></div>
@@ -42,18 +54,50 @@
 	</div>
 </template>
 <script>
+	import { mapState, mapMutations } from 'vuex'
+
 	export default{
 		name: 'Public_friend',
 		props: [
 			'username', 
 			'url_public_img', 
-			'url_photo_profile', 
-			'coloor', 
+			'url_photo_profile',  
 			'description',
 			'numberComment',
 			'nameUserComment',
 			'comment_res'
 		],
+
+		data() {
+			return{
+				clickCounterActive: 0,
+				showHearActive: { 'opacity': '0' }
+			}
+		},
+
+		computed: {
+			...mapState({
+				likeColor: state => state.likeColor
+			}),
+		},
+		methods: {
+			...mapMutations([
+				'changeColor',
+				'changeColorRed'
+			]),
+
+			handleChangeColor: function(){
+				this.clickCounterActive++
+
+				if(this.clickCounterActive === 2){
+					this.changeColorRed()
+					this.showHearActive.opacity = '.7'
+					this.clickCounterActive = 0
+
+					setTimeout(() =>  this.showHearActive.opacity = '0' ,1000)
+				}
+			},
+		}
 	}
 
 
@@ -100,8 +144,18 @@
 		border-radius: 100%;
 	}
 
-	.public_Friend-img img{
+	.public_Friend-img{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.public_Friend-img .image_post_friends{
 		width: 100%;
+	}
+
+	.public_Friend-img .anima_heart{
+		position: absolute;
 	}
 
 	.config{width: 4%; margin: 0 4% 0 0;}

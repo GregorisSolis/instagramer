@@ -55,6 +55,8 @@
 		 margin: 8% 0 0 24%;
 	}
 
+	.friend_username{text-align: center;}
+
 	.container_profile .history_container .border_handle{border: 1px solid #ccc;}
 
 	@media only screen and (max-width: 600px){
@@ -67,6 +69,15 @@
 		{
 			width: 60px;
 			height: 60px;
+		}
+	}
+
+	@media only screen and (max-width: 350px){
+		.container_profile .history_container img,
+		.container_profile .border_handle
+		{
+			width: 32px;
+			height: 32px;
 		}
 	}
 </style>

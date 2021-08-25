@@ -56,8 +56,7 @@ export default {
 
 	.nav_container{
 		border-bottom: 1px solid rgba(209,209,209,1);
-		height: 7vh;
-		max-width: 100%;
+		height: 7%;
 		overflow: hidden;
 		position: fixed;
 		width: 100%;
@@ -99,7 +98,8 @@ export default {
 
 	.nav_container h3{margin: 0; font-family: 'Style Script', cursive; font-size: 1.9em;}
 
-	@media only screen and (max-width: 600px){
+  @media only screen and (max-width: 780px){
+  
 		.nav_container-desktop .icons-home,
 		.nav_container-desktop .icons-heart,
 		.nav_container-desktop .icons-compass,
@@ -122,9 +122,9 @@ export default {
 			font-size: 1.2rem;
 		}
 
-		.nav_container{height: 46px}
+		.nav_container{height: 6%}
 		.nav_container nav{width: 90%;}
-		.nav_container nav .logo{width: 100%;}
+		.nav_container nav .logo{width: 100%; text-align: center}
 		.icons{width: 8%;}
 
 		.nav_container-desktop .icons a{margin: 0 0 0 auto;}
@@ -139,7 +139,7 @@ export default {
 			bottom: 0;
 			z-index: 300;
 			width: 100%;
-			height: 50px;
+			height: 6%;
 		}
 
 		.nav_container-mobile .icons{

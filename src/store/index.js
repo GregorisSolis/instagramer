@@ -5,11 +5,17 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+      likeColor: {'background': 'white'}
   },
   mutations: {
-  },
-  actions: {
-  },
-  modules: {
+      changeColor: state => {
+        if(state.likeColor.background === 'red'){
+            state.likeColor = {'background': 'white'}
+        }else{
+            state.likeColor = {'background': 'red'}
+        }
+      },
+
+      changeColorRed: state => state.likeColor = {'background': 'red'}
   }
 })

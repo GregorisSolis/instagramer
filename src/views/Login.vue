@@ -39,7 +39,7 @@
   </form>
 
   <div class="new-account">
-    <p>Don't have an account?<a href="#">Sign up</a></p>
+    <p>Don't have an account? <a href="#">Sign up</a></p>
   </div>
 
   <div class="getAPP">
@@ -130,7 +130,7 @@ export default {
     font-size: .9rem;
   }
   .home .forgot{font-size: .8rem;padding: 0;}
-  .forgot a, .getAPP{color:  black;}
+  .forgot a, .getAPP{color:  black; text-align: center;}
   .getAPP img{height: 40px;margin: 0 5px;}
   .home h1{
     font-family: 'Style Script', cursive;
